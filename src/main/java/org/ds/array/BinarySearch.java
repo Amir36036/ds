@@ -43,6 +43,23 @@ public class BinarySearch {
         return -1; // Target element not found
     }
 
+    public static int binarySearchByRecursion(int[] arr, int key, int startIndex, int endIndex){
+        if(startIndex > endIndex){
+            return -1;
+        }
+
+        int midIndex = startIndex + (endIndex - startIndex) / 2;
+
+        if(key == arr[midIndex]) {
+            return midIndex;
+        }else if (key > arr[midIndex]){
+            return binarySearchByRecursion( arr,  key, midIndex + 1, endIndex);
+        }else {
+           return binarySearchByRecursion(arr, key, startIndex, midIndex -1);
+        }
+
+    }
+
     public static void main(String[] args) {
 
         int[] arr = {2,4,6,8,10,12,14};
@@ -56,6 +73,12 @@ public class BinarySearch {
         int index5 = binarySearch(arr, 7, 5);
 
         System.out.println("index of 5 :"+index5);
+
+
+        int index14ByRec = binarySearchByRecursion(arr, 14, 0, 6);
+        System.out.println("index of 14 by rec :"+index14ByRec);
+
+
 
 
     }
