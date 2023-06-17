@@ -17,7 +17,7 @@ public class BinarySearch {
     The time complexity of the Binary Search algorithm can be expressed as O(log n),
     where n is the number of elements in the sorted input array.
     */
-    public static int binearySearch(int[] arr, int size, int key){
+    public static int binarySearch(int[] arr, int size, int key){
 
         int startIndex = 0;
         int endIndex = arr.length - 1;
@@ -47,13 +47,13 @@ public class BinarySearch {
 
         int[] arr = {2,4,6,8,10,12,14};
 
-        int index14 = binearySearch(arr, 7, 14);
+        int index14 = binarySearch(arr, 7, 14);
         System.out.println("index of 14 :"+index14);
 
-        int index2 = binearySearch(arr, 7, 2);
+        int index2 = binarySearch(arr, 7, 2);
         System.out.println("index of 2 :"+index2);
 
-        int index5 = binearySearch(arr, 7, 5);
+        int index5 = binarySearch(arr, 7, 5);
 
         System.out.println("index of 5 :"+index5);
 
