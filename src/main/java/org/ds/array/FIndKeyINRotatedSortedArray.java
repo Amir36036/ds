@@ -3,7 +3,7 @@ package org.ds.array;
 public class FIndKeyINRotatedSortedArray {
 
 
-   /* 
+   /*
    Initialize ans variable to -1.
     Set startIndex to 0 and endIndex to size - 1.
     Calculate midIndex as the average of startIndex and endIndex.
@@ -23,7 +23,7 @@ public class FIndKeyINRotatedSortedArray {
         int startIndex = 0;
         int endIndex = size - 1;
         int midIndex = startIndex + (endIndex - startIndex) / 2;
-        while (startIndex<endIndex){
+        while (startIndex<=endIndex){
 
             if(arr[midIndex] == key){
                 ans = midIndex;
@@ -40,10 +40,10 @@ public class FIndKeyINRotatedSortedArray {
     }
 
     public static void main(String[] args) {
-        int[] arr = {7,9,10,3,3};
+        int[] arr = {7,9,10,2,3};
 
-        int index = findKey(arr, arr.length, 5);
+        int index = findKey(arr, arr.length, 2);
 
-        System.out.println("pivot index : "+ index);
+        System.out.println("index for key : "+ index);
     }
 }
