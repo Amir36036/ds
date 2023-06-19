@@ -21,18 +21,18 @@ public class FindSquareRootByBinarySearch {
         int ans = -1;
         int startIndex = 0;
         int endIndex = num;
-        int midIndex = startIndex + (endIndex - startIndex ) / 2;
+        long midIndex = startIndex + (endIndex - startIndex ) / 2;
 
         while (startIndex <= endIndex){
 
             if((midIndex*midIndex) == num){
-                ans = midIndex;
+                ans = (int )midIndex;
                 return ans;
             } else if ((midIndex*midIndex) > num) {
-                endIndex = midIndex - 1;
+                endIndex = (int) midIndex - 1;
             }else {
-                ans = midIndex;
-                startIndex = midIndex + 1;
+                ans = (int) midIndex;
+                startIndex = (int) midIndex + 1;
             }
             midIndex = startIndex + (endIndex - startIndex ) / 2;
         }
@@ -40,7 +40,7 @@ public class FindSquareRootByBinarySearch {
     }
 
     public static void main(String[] args) {
-        int index = findSquareRoot(27);
+        int index = findSquareRoot(1000000);
         System.out.println("square root of 27 : "+index);
     }
 }
