@@ -1,6 +1,6 @@
 package org.ds.array;
 
-public class BookAllocation {
+public class BookAllocationByBinarySearch {
 
 
     public static int bookAllocation(int[] arr, int firstIndexValue, int sumOfArr, int numberOfStudent){
